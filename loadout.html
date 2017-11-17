@@ -11,23 +11,30 @@
             left:0px;
             z-index:1000;
         }
+            
+        .center{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
         </style>
     </head>
     
     <body>
         <div class = "overlay fadeOut" style="">
-            <center>Welcome</center>
-            <center><img src="angkotOnline.jpg" alt="angkotOnline"></center>
+            <div class="center">
+                <img src="angkot.jpg">
+            </div>
         </div>
-        
-        <div>Random Text</div>
-        <button>Test</button>
-        Testing
-        <br>
-        Testing
         <script>
             $(document).ready(function() {
-                $('.fadeOut').delay(2000).fadeOut(5000);
+                var x = 3000;
+                $('.fadeOut').delay(500).fadeOut(x,function(x){
+                    console.log = x;
+                    if(x = 500)
+                        window.location.href = "daftar.html";
+                })
             });
         </script>
     </body>
