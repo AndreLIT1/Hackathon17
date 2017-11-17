@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>HACKATHON 101</title>
+		<link rel="stylesheet" href="design.css">
+		<link rel="stylesheet" href="navbar.css">
+		<link rel="stylesheet" href="animate.css">
+		<link rel="icon" href="angkot.png">
+	</head>
+	
+	<body>
+		<ul class="container slideInDown animated">
+            <li style="float: left"><a href="index.html" title="Homepage"><img src="angkot.png"/></a></li>
+            <li><a href="masuk.html" title="Login">MASUK</a></li>
+            <li><a href="daftar.html" title="News">DAFTAR</a></li>
+        </ul>
+		<form method="post" action="daftar.php" id="reg">
+			<div id="register" class="container slideInUp animated">
+                    <h2>DAFTAR</h2>
+                    <br>
+                    <label>NAMA</label>
+                    <br>
+                    <input type="text" placeholder="Username" name="usrnama" required>
+                    <br>
+					<label>EMAIL</label>
+                    <br>
+                    <input type="text" placeholder="Email" name="email" required>
+                    <br>
+                    <label>PASSWORD (MAKS. 32 KARAKTER)</label>
+                    <br>
+                    <input maxlength="32" type="password" placeholder="Password" name="pswrd" id="password" required> 
+                    <br>
+                    <img src="seepswrd.png" class="seepswrd" onmouseover="seePswrd()" onmouseout="hidePswrd()" title="See Password">
+                    <br>
+					<label>TANGGAL LAHIR (1998/12/31)</label>
+            		<br>
+					<br>
+            		<select name="year" form="reg" id="year">
+            		</select> &nbsp;
+            		<select name="month" form="reg" id="month" onclick="checkDOB()">
+            		</select> &nbsp;
+            		<select name="date" form="reg" id="date">
+            		</select>
+					<br>
+					<br>
+                    <label>NO. TELPON</label>
+                    <br>
+                    <input type="text" placeholder="Phone" name="telp" required>
+                    <br>
+                    <br>
+                    <input type="submit" name="register_btn" value="DAFTAR" class="register_button">
+            </div>
+		
+		</form>
+	</body>
+	<script>
+        function initDOB() {
+            for (var i = 1; i <= 31; i++)
+                document.getElementById("date").innerHTML += "<option value=\'" + i + "\' id=\'" + i + "d\'>" + i + "</option>";
+            for (var i = 1; i <= 12; i++)
+                document.getElementById("month").innerHTML += "<option value=\'" + i + "\' id=\'" + i + "m\'>" + i + "</option>";
+            for (var i = 1970; i <= 2050; i++)
+                document.getElementById("year").innerHTML += "<option value=\'" + i + "\' id=\'" + i + "y\'>" + i + "</option>";
+        }
+        function checkDOB() {
+            var selD = document.getElementById("date");
+            var selM = document.getElementById("month");
+            var selY = document.getElementById("year");
+            var selectMonth = selM.selectedIndex;
+            var selectYear = selY.options[selY.selectedIndex].text;
+            console.log("checkDB");
+            if (selD.options.length != 0) {
+                console.log("selectMonth: " + selectMonth);
+                console.log("switch");
+                selD.options.length = 0;
+            }
+            switch (selectMonth) {
+                case 0:
+                case 2:
+                case 4:
+                case 6:
+                case 7:
+                case 9:
+                case 11:
+                    console.log("switch 31");
+                    for (var i = 1; i <= 31; i++)
+                        document.getElementById("date").innerHTML += "<option value=\'" + i + "\' id=\'" + i + "d\'>" + i + "</option>";
+                    break;
+                case 3:
+                case 5:
+                case 8:
+                case 10:
+                    console.log("switch 30");
+                    for (var i = 1; i <= 30; i++)
+                        document.getElementById("date").innerHTML += "<option value=\'" + i + "\' id=\'" + i + "d\'>" + i + "</option>";
+                    break;
+                case 1:
+                    if (selectYear % 4 == 0) {
+                        console.log("switch 29");
+                        for (var i = 1; i <= 29; i++)
+                            document.getElementById("date").innerHTML += "<option value=\'" + i + "\' id=\'" + i + "d\'>" + i + "</option>";
+                    } else {
+                        console.log("switch 28");
+                        for (var i = 1; i <= 28; i++)
+                            document.getElementById("date").innerHTML += "<option value=\'" + i + "\' id=\'" + i + "d\'>" + i + "</option>";
+                    }
+                    break;
+            }
+        }
+        initDOB();
+		
+		function seePswrd() {
+    document.getElementById("password").type = "text";
+}
+
+function hidePswrd() {
+    document.getElementById("password").type = "password";
+}
+    </script>
+</html>

@@ -1,0 +1,50 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+	background-color: limegreen;
+	background-image: url(background.jpg);
+	background-size: cover;
+}
+
+input[type="text"], input[type="password"] {
+	width: 25%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid indianred;
+	border-radius: 3px;
+	box-sizing: border-box;
+ 	               
+}
+
+#register, #login {
+	text-align: right;
+	padding-right: 50px;
+}
+            
+button {
+	border: none;
+	background-color: indianred;
+	color: floralwhite;
+	padding: 10px 5px;
+	width: 10%;   
+}
+            
+.register_button {
+	cursor: pointer;
+	border: none;
+	background-color: indianred;
+	color: floralwhite;
+	padding: 10px 5px;
+	width: 10%;  
+	border-radius: 3px;
+}
+
+.seepswrd {
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	align-self: center;
+	
+}
