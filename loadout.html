@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style>
+        .overlay{
+            background-color:firebrick;
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0px;
+            left:0px;
+            z-index:1000;
+        }
+        </style>
+    </head>
+    
+    <body>
+        <div class = "overlay fadeOut" style="">
+            <center>Welcome</center>
+            <center><img src="angkotOnline.jpg" alt="angkotOnline"></center>
+        </div>
+        
+        <div>Random Text</div>
+        <button>Test</button>
+        Testing
+        <br>
+        Testing
+        <script>
+            $(document).ready(function() {
+                $('.fadeOut').delay(2000).fadeOut(5000);
+            });
+        </script>
+    </body>
+    
+    
+</html>
