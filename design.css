@@ -8,7 +8,7 @@ body {
 }
 
 input[type="text"], input[type="password"] {
-	width: 25%;
+	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
@@ -16,6 +16,14 @@ input[type="text"], input[type="password"] {
 	border-radius: 3px;
 	box-sizing: border-box;
  	               
+}
+
+.revised{
+    float: right;
+    background-color: forestgreen;
+    border: 0px solid forestgreen;
+}
+    
 }
 
 #register, #login {
