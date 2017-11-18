@@ -1,0 +1,25 @@
+.rightstat{
+    position: relative;
+    height: 900%;
+    width: 20%;
+    left: 80%;
+    display: block;
+    background-color: forestgreen;
+}
+
+.showButt{
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    left: 80%;
+    display:block;
+    background-color: darkred;
+}
+
+.leftstat{
+    position: absolute;
+    height: 100%;
+    width:20%;
+    left: 80%;
+    background-color: forestgreen;
+}
