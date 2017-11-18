@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style>
+        .overlay{
+            background-color:darkgreen;
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0px;
+            left:0px;
+            z-index:1000;
+        }
+            
+        .center{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        </style>
+    </head>  
+    <body>
+        <div class = "overlay fadeOut" style="">
+            <div class="center">
+                <img src="angkot.jpg">
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('.fadeOut').delay(500).fadeOut(3000,function(){
+                        window.location.href = "masuk.html";
+                })
+            });
+        </script>
+    </body>   
+</html>

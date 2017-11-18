@@ -1,0 +1,171 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+	background-color: limegreen;
+	background-image: url(background.jpg);
+	background-size: cover;
+	background-position: fixed;
+}
+
+.destbg {
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+	background-image: none;
+	background-color: darkgreen;
+}
+
+h2 {
+	color: floralwhite;
+}
+
+input[type="text"], input[type="password"] {
+	width: 25%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid indianred;
+	border-radius: 3px;
+	box-sizing: border-box;
+ 	               
+}
+
+#register, #login, #akun {
+	text-align: right;
+	padding-right: 50px;
+}
+            
+button {
+	border: none;
+	background-color: indianred;
+	color: floralwhite;
+	padding: 10px 5px;
+	width: 10%;   
+}
+            
+.register_button {
+	cursor: pointer;
+	border: none;
+	background-color: indianred;
+	color: floralwhite;
+	padding: 10px 5px;
+	width: 10%;  
+	border-radius: 3px;
+}
+
+.seepswrd {
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	align-self: center;
+	
+}
+
+/* slideshow */
+* {
+    box-sizing: border-box;
+}
+
+.slider {
+    max-width: 1400px;
+    position: relative;
+    margin: auto;
+	background-color: floralwhite;
+}
+
+.slideimg {
+    width: 100%;
+    height: 615px;
+}
+
+/* next and prev */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: dodgerblue;
+    color: blue;
+}
+
+/*title text*/
+.title {
+    font-weight: 700;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    text-align: center;
+    color: dodgerblue;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.title:hover {
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+}
+
+/* slide page */
+.slidepage {
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.advertise, .aboutus {
+	max-width: 1400px;
+	position: relative;
+	margin: auto;
+	background-color: floralwhite;
+}
+
+.advimg, .aboutimg {
+    width: 100%;
+    height: 615px;
+}
+.active, .dot:hover {
+    background-color: blue;
+}
+
+/* fade animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to { opacity: 1}
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
